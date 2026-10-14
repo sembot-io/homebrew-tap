@@ -1,0 +1,8 @@
+# Standard CI v2 — CI pochodzi z cross-repository-scripts (required-ci.yml).
+# Tap Homebrew: shellcheck / actionlint / YAML na zmienionych plikach. Formuły
+# odzwierciedlają wydania innych repo — bez changelogu i bramki dokumentacji.
+profile: infra
+
+paths:
+  product: '^$'
+  docs_trigger: '^$'

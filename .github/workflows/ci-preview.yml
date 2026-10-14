@@ -1,0 +1,18 @@
+# .github/workflows/ci-preview.yml — TYMCZASOWY podgląd centralnego CI w PR-ze
+# wdrożeniowym, zanim repo trafi do org rulesetu „Require CI (central)”.
+# Po dodaniu repo do rulesetu USUŃ ten plik (inaczej CI liczy się dwa razy).
+name: CI preview (sembot-io)
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  checks: read
+  packages: read
+  pull-requests: read
+
+jobs:
+  central:
+    uses: sembot-io/cross-repository-scripts/.github/workflows/required-ci.yml@v2
+    secrets: inherit
